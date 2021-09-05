@@ -1,2 +1,2 @@
-# my-travel-net
-MyTravel.net landing page.
+# MyTravel.net
+MyTravel.net it's a travels website landing page.

@@ -1,0 +1,24 @@
+{
+  "name": "my-travel-net",
+  "version": "1.0.0",
+  "description": "Travels website landing page.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kreyes96/my-travel-net.git"
+  },
+  "author": "Kevin Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kreyes96/my-travel-net/issues"
+  },
+  "homepage": "https://github.com/Kreyes96/my-travel-net#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-dart-sass": "^1.0.2"
+  }
+}
