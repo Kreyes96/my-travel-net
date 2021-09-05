@@ -12,3 +12,8 @@ html {
 body {
    font-family: $main-font;
 }
+
+.mainContainer {
+   max-width: 1250px;
+   margin: 0 auto;
+}
