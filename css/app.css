@@ -14,7 +14,7 @@ body {
 }
 
 .mainContainer {
-  max-width: 1250px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -59,7 +59,7 @@ body {
   width: 100%;
   background-color: #3f4579;
   inset-inline-start: 0;
-  inset-block-start: 1.3rem;
+  inset-block-start: 1.5rem;
   transform: scaleX(0);
   transition: all 0.3s ease;
 }
@@ -95,9 +95,215 @@ body {
   color: #3f4579;
 }
 
+.navbar__actionButton--login:hover {
+  color: #3f4579;
+}
+
 .navbar__actionButton--singup {
   color: #ffffff;
   background-color: #3f4579;
   padding: 0.8rem 2rem;
   border-radius: 10px;
+}
+
+.navbar__actionButton--singup:hover {
+  color: #ffffff;
+}
+
+/* ===== main section ===== */
+.main {
+  background: linear-gradient(#D6AEE1 55%, #A5A0DA);
+  width: 100%;
+  height: 600px;
+  margin-block: 6rem 10rem;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main__carousel {
+  height: 100%;
+  width: 100%;
+}
+
+.main__carouselInner,
+.main__carouselItem,
+.main__carouselImage {
+  height: 100%;
+}
+
+.main__carouselItem {
+  position: relative;
+}
+
+.main__carouselImage {
+  position: absolute;
+  inset-block-end: 0;
+  object-fit: contain;
+  max-height: 350px;
+}
+
+.main__carouselCaption {
+  position: absolute;
+  inset-block-start: 12rem;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #3A3446;
+}
+
+.main__carouselButtons {
+  position: absolute;
+  inset-block-start: 12rem;
+  display: flex;
+  align-items: center;
+  column-gap: 14rem;
+}
+
+.main__carouselButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #3f4579;
+  border-radius: 50%;
+}
+
+.main__carouselArrow {
+  width: 15px;
+  color: #3f4579;
+}
+
+.main__carouselButton:hover {
+  background-color: #3f4579;
+}
+.main__carouselButton:hover > .main__carouselArrow {
+  color: #ffffff;
+}
+
+.main__headings {
+  position: absolute;
+  inset-block-start: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.main__heading,
+.main__subheading {
+  margin: 0;
+}
+
+.main__heading {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: #3f4579;
+}
+
+.main__subheading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3A3446;
+}
+
+.main__search {
+  position: absolute;
+  inset-block-end: -4rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  width: 80%;
+  height: 150px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.3);
+  padding: 2rem 2.5rem;
+}
+
+.main__searchForm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  column-gap: 2rem;
+}
+
+.main__searchForm-group {
+  display: flex;
+  column-gap: 0.8rem;
+}
+
+.main__searchForm-group--location {
+  width: 32%;
+}
+
+.main__searchForm-group--date {
+  width: 26%;
+}
+
+.main__searchForm-group--guests {
+  width: 18%;
+}
+
+.main__searchForm-iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ded5e0;
+}
+
+.main__searchForm-icon {
+  width: 13px;
+  color: #3f4579;
+}
+
+.main__searchForm-inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.main__searchForm-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3A3446;
+}
+
+.main__searchForm-searchInput,
+.main__searchForm-dateInput,
+.main__searchForm-selectInput {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  height: 45px;
+  color: #A196AB;
+}
+
+.main__searchForm-searchInput::placeholder {
+  color: #A196AB;
+}
+
+.main__searchForm-searchInput::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.main__searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f4579;
+  width: 6%;
+  height: 100%;
+  border-radius: 15px;
+  border: none;
+}
+
+.main__searchButton-icon {
+  width: 22px;
+  color: #ffffff;
 }

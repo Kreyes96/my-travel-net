@@ -1,0 +1,96 @@
+/* ===== header ===== */
+.header {
+   padding-block-start: 2rem;  
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+// Logo
+.navbar__logo {
+   font-size: 1.4rem;
+   font-weight: 700;
+   text-decoration: none;
+   color: $black-color;
+}
+
+.navbar__logo--name {
+   color: $blue-color;
+}
+
+// List items
+.navbar__listItems {
+   display: flex;
+   column-gap: 2rem;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.navbar__itemWrapper {
+   position: relative;
+}
+
+.navbar__itemWrapper::after {
+   content: "";
+   position: absolute;
+   height: 2px;
+   width: 100%;
+   background-color: $blue-color;
+   inset-inline-start: 0;
+   inset-block-start: 1.5rem;
+   transform: scaleX(0);
+   transition: all 0.3s ease;
+}
+
+.navbar__itemWrapper:hover::after {
+   transform: scaleX(1);
+}
+
+.navbar__itemLink {
+   font-size: .9rem;
+   font-weight: 500;
+   text-decoration: none;
+   color: $dark-gray-color;
+}
+
+.navbar__itemWrapper:hover {
+   .navbar__itemLink {
+      color: $blue-color;
+   }
+}
+
+// Action buttons
+.navbar__actionsContainer {
+   display: flex;
+   align-items: center;
+   column-gap: 1.2rem;
+}
+
+.navbar__actionButton {
+   font-size: .9rem;
+   font-weight: 500;
+   text-decoration: none;
+}
+
+.navbar__actionButton--login {
+   color: $blue-color;
+}
+
+.navbar__actionButton--login:hover {
+   color: $blue-color;
+}
+
+.navbar__actionButton--singup {
+   color: $white-color;
+   background-color: $blue-color;
+   padding: .8rem 2rem;
+   border-radius: 10px;
+}
+
+.navbar__actionButton--singup:hover {
+   color: $white-color;
+}
