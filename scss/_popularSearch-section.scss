@@ -1,0 +1,96 @@
+/* ====== popular search section ===== */
+.popularSearch {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   row-gap: 1rem;
+   width: 100%;
+   margin-block-end: 5rem;
+}
+
+// heading
+.popularSearch__headingContainer {
+   display: flex;
+   align-items: center;
+   height: 50px;
+   width: 190px;
+   position: relative;
+}
+
+.popularSearch__heading {
+   font-size: 1.3rem;
+   font-weight: 600;
+   color: $black-color;
+   margin: 0;
+}
+
+.heading__purpleCircle {
+   position: absolute;
+   inset-block-start: 0;
+   inset-inline-end: .8rem;
+   width: 9px;
+   height: 9px;
+   border-radius: 50%;
+   background-color: #b4b1d6;
+}
+
+.heading__pinkCircle {
+   position: absolute;
+   inset-block-start: 1.4rem;
+   inset-inline-end: 0;
+   width: 11px;
+   height: 11px;
+   border-radius: 50%;
+   background-color: #dac3e0;
+}
+
+.heading__orangeCircle {
+   position: absolute;
+   inset-block-end: 0;
+   inset-inline-end: 1.4rem;
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   background-color: #d3b5a9;
+}
+
+// places
+.popularSearch__placesContainer {
+   width: 85%;
+}
+
+.popularSearch__placesList {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 1.2rem 1.5rem;
+}
+
+.popularSearch__placeItem {
+   border-radius: 14px;
+}
+
+.popularSearch__placeItem:hover {
+   background: linear-gradient(to left, #de91f3, #A5A0DA);
+   transform: scale(1.1);
+   transition: all .5s ease;
+   
+   .popularSearch__placeLink {
+      color: $white-color;
+      border: 1px solid transparent;
+   }
+}
+
+.popularSearch__placeLink {
+   font-size: 1rem;
+   font-weight: 500;
+   text-decoration: none;
+   color: $black-color;
+   border: 1px solid $dark-gray-color;
+   border-radius: 14px;
+   padding: .7rem 2rem;
+   display: inline-block;
+}

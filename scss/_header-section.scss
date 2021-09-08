@@ -1,4 +1,4 @@
-/* ===== header ===== */
+/* ===== header section ===== */
 .header {
    padding-block-start: 2rem;  
 }
@@ -14,6 +14,10 @@
    font-size: 1.4rem;
    font-weight: 700;
    text-decoration: none;
+   color: $black-color;
+}
+
+.navbar__logo:hover {
    color: $black-color;
 }
 
