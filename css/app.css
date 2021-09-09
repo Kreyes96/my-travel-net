@@ -319,7 +319,7 @@ body {
   align-items: center;
   row-gap: 1rem;
   width: 100%;
-  margin-block-end: 5rem;
+  margin-block-end: 7.5rem;
 }
 
 .popularSearch__headingContainer {
@@ -404,4 +404,30 @@ body {
   border-radius: 14px;
   padding: 0.7rem 2rem;
   display: inline-block;
+}
+
+/* ===== categories section ===== */
+.categories {
+  width: 100%;
+  height: 400px;
+  background-color: #ECE6F4;
+  margin-block-end: 5rem;
+  padding: 3.5rem 0;
+}
+
+.mainContainer--categories {
+  width: 100%;
+  height: 100%;
+}
+
+.categories__heading {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #3A3446;
+}
+
+.categories__description {
+  margin-block: 1.5rem 1rem;
+  color: #3A3446;
 }

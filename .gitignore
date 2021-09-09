@@ -1,4 +1,6 @@
+bootstrap
 node_modules
 images/psd
 
+css/normalize.css
 package-lock.json
