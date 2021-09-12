@@ -33,13 +33,13 @@
 
                <li class="navbar__item">
                   <div class="navbar__itemWrapper">
-                     <a href="#" class="navbar__itemLink">Booking Form</a>
+                     <a href="#main__search" class="navbar__itemLink">Booking Form</a>
                   </div>
                </li>
 
                <li class="navbar__item">
                   <div class="navbar__itemWrapper">
-                     <a href="#" class="navbar__itemLink">Category</a>
+                     <a href="#categories" class="navbar__itemLink">Categories</a>
                   </div>
                </li>
 
@@ -61,7 +61,7 @@
          <div id="places" class="main__carousel carousel slide" data-bs-ride="carousel">
             <div class="main__carouselInner carousel-inner">
                <div class="main__carouselItem carousel-item active">
-                  <img src="./images/taj_mahal.png" class="main__carouselImage d-block w-100">
+                  <img src="./images/carousel/taj_mahal.png" class="main__carouselImage d-block w-100" alt="A big building color white with crafter design.">
 
                   <strong class="main__carouselCaption carousel-caption d-none d-md-block">
                      Taj Mahal
@@ -69,7 +69,7 @@
               </div>
               
               <div class="main__carouselItem carousel-item">
-                  <img src="./images/pizza_tower.png" class="main__carouselImage d-block w-100">
+                  <img src="./images/carousel/pisa_tower.png" class="main__carouselImage d-block w-100" alt="A tall and old building with cylinder shape.">
 
                   <strong class="main__carouselCaption carousel-caption d-none d-md-block">
                      Torre di Pisa
@@ -114,7 +114,7 @@
             <h2 class="main__subheading">Explore Beautiful Places</h2>
          </div>
 
-         <div class="main__search">
+         <div class="main__search" id="main__search">
             <form class="main__searchForm">
                <div class="main__searchForm-group main__searchForm-group--location">
                   <div class="main__searchForm-iconContainer">
@@ -277,7 +277,7 @@
       </section>
    </div>
 
-   <section class="categories">
+   <section class="categories" id="categories">
       <div class="mainContainer mainContainer--categories">
          <h2 class="categories__heading">Categories</h2>
 
@@ -285,6 +285,68 @@
             Much destinations here but don't be confuse! It's <br>
             already groupted by category.
          </p>
+
+         <div class="categories__items">
+            <div class="categories__item">
+               <div class="categories__itemImage-container">
+                  <img src="./images/categories/beach.png" alt="" class="categories__itemImage">
+               </div>
+
+               <div class="categories__itemActions-container">
+                  <h3 class="categories__itemName">Beach</h3>
+
+                  <a href="#" class="categories__itemLink">See more</a>
+               </div>
+            </div>
+
+            <div class="categories__item">
+               <div class="categories__itemImage-container">
+                  <img src="./images/categories/volcano.png" alt="" class="categories__itemImage">
+               </div>
+
+               <div class="categories__itemActions-container">
+                  <h3 class="categories__itemName">Volcano</h3>
+
+                  <a href="#" class="categories__itemLink">See more</a>
+               </div>
+            </div>
+
+            <div class="categories__item">
+               <div class="categories__itemImage-container">
+                  <img src="./images/categories/desert.png" alt="" class="categories__itemImage">
+               </div>
+
+               <div class="categories__itemActions-container">
+                  <h3 class="categories__itemName">Desert</h3>
+
+                  <a href="#" class="categories__itemLink">See more</a>
+               </div>
+            </div>
+
+            <div class="categories__item">
+               <div class="categories__itemImage-container">
+                  <img src="./images/categories/island.png" alt="" class="categories__itemImage">
+               </div>
+
+               <div class="categories__itemActions-container">
+                  <h3 class="categories__itemName">Island</h3>
+
+                  <a href="#" class="categories__itemLink">See more</a>
+               </div>
+            </div>
+
+            <div class="categories__item">
+               <div class="categories__itemImage-container">
+                  <img src="./images/categories/temple.png" alt="" class="categories__itemImage">
+               </div>
+
+               <div class="categories__itemActions-container">
+                  <h3 class="categories__itemName">Temple</h3>
+
+                  <a href="#" class="categories__itemLink">See more</a>
+               </div>
+            </div>
+         </div>
       </div>
    </section>
 
