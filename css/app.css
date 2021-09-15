@@ -695,3 +695,163 @@ body {
   border-radius: 50%;
   background-color: #8778A5;
 }
+
+/* ===== places section ===== */
+.places {
+  width: 100%;
+  margin-block-end: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.places__heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #3A3446;
+}
+
+.places__description {
+  margin-block: 1.3rem 5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #A196AB;
+}
+
+.places__cardsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 3.8rem;
+  margin-block-end: 4rem;
+}
+
+.places__card {
+  width: 265px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.places__cardContent {
+  padding: 1rem;
+}
+
+.places__cardImage-container {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 0px 25px 20px -30px rgba(0, 0, 0, 0.8);
+}
+
+.places__cardImage {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.places__cardName {
+  margin-block: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3A3446;
+}
+
+.places__cardDescription {
+  margin-block: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #8778A5;
+}
+
+.places__cardInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.places__cardInfo-country,
+.places__cardInfo-price {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+
+.places__cardInfo-countryIcon {
+  width: 10px;
+  color: #8778A5;
+}
+
+.places__cardInfo-countryName,
+.places__cardInfo-priceText {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #8778A5;
+}
+
+.places__cardInfo-priceContainer {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #8778A5;
+}
+
+.places__cardInfo-priceIcon {
+  color: #ffffff;
+  width: 6px;
+}
+
+.places__cardInfo-priceValue {
+  font-weight: 700;
+}
+
+.places__cardInfo-pricePackage {
+  font-size: 0.6rem;
+}
+
+.places__cardButton {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 0 0 10px 10px;
+  background-color: #3f4579;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.places__cardButton:hover {
+  color: #ffffff;
+}
+
+.places__cardButton-arrow {
+  width: 14px;
+  color: #ffffff;
+}
+
+.places__card:hover {
+  transform: translateY(-1rem);
+  transition: all 0.5s ease;
+}
+
+.places__viewDestinations {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1.2rem 3rem;
+  border-radius: 15px;
+  background-color: #3f4579;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.places__viewDestinations:hover {
+  color: #ffffff;
+}
