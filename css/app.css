@@ -30,8 +30,8 @@ body {
 }
 
 .navbar__logo {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   text-decoration: none;
   color: #3A3446;
 }
@@ -864,7 +864,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-block-end: 5rem;
+  margin-block-end: 10rem;
 }
 
 .appStore__upWave-container,
@@ -939,4 +939,168 @@ body {
 .appStore__brandApple-name {
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* ===== footer section ===== */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block-end: 2rem;
+}
+
+.footer__sections {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1.4rem;
+}
+
+.footer__linkHome {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #3A3446;
+  text-decoration: none;
+}
+
+.footer__linkHome:hover {
+  color: #3A3446;
+}
+
+.footer__linkHome--name {
+  color: #3f4579;
+}
+
+.footer__description {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #A196AB;
+  margin: 0;
+}
+
+.footer__socialMedia-container {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.footer__socialMedia-link {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #A196AB;
+  text-decoration: none;
+  border: 1px solid #A196AB;
+  border-radius: 50%;
+}
+
+.facebook-link:hover {
+  border: 1px solid #3b5998;
+  background-color: #3b5998;
+  transition: all 0.3s ease;
+}
+.facebook-link:hover .facebook-icon {
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.twitter-link:hover {
+  border: 1px solid #00acee;
+  background-color: #00acee;
+  transition: all 0.3s ease;
+}
+.twitter-link:hover .twitter-icon {
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.instagram-link:hover {
+  border: 1px solid #F56040;
+  background-color: #F56040;
+  transition: all 0.3s ease;
+}
+.instagram-link:hover .instagram-icon {
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.facebook-icon,
+.twitter-icon,
+.instagram-icon {
+  color: #A196AB;
+}
+
+.facebook-icon {
+  width: 10px;
+}
+
+.twitter-icon,
+.instagram-icon {
+  width: 15px;
+}
+
+.footer__sectionHeading-wrapper {
+  position: relative;
+}
+
+.footer__sectionHeading-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  inset-block-start: 1.4rem;
+  inset-inline-start: 0;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+  background-color: #3f4579;
+}
+
+.footer__section:hover .footer__sectionHeading-wrapper::after {
+  transform: scaleX(1);
+}
+
+.footer__sectionHeading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3f4579;
+  margin: 0;
+}
+
+.footer__sectionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__sectionList-link {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #A196AB;
+  text-decoration: none;
+}
+
+.footer__sectionList-link:hover {
+  color: #A196AB;
+}
+
+.footer__copyrightContainer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer__copyrightText {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #A196AB;
 }
