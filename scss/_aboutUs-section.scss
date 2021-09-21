@@ -114,10 +114,14 @@
 }
 
 .aboutUs__descriptionHeading {
-   font-size: 2.2rem;
+   font-size: 1rem;
    font-weight: 700;
    color: $black-color;
    margin-block: 0 3rem;
+   
+   @include desktop-big-size {
+      font-size: 2.2rem;
+   }
 }
 
 .aboutUs__descriptionHeading--name {

@@ -21,8 +21,14 @@
    }
 }
 
-@mixin desktop-size() {
-   @media only screen and (min-width: #{$desktop-size}) {
+@mixin desktop-small-size() {
+   @media only screen and (min-width: #{$desktop-small-size}) {
+      @content;
+   }
+}
+
+@mixin desktop-big-size() {
+   @media only screen and (min-width: #{$desktop-big-size}) {
       @content;
    }
 }

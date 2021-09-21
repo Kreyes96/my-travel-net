@@ -1,20 +1,40 @@
 /* ===== header section ===== */
 .header {
-   padding-block-start: 2rem;  
+   padding: .5rem;
+
+   @include desktop-big-size {
+      padding-block-start: 2rem;
+   }
 }
 
 .navbar {
    display: flex;
-   justify-content: space-between;
+   flex-direction: column;
    align-items: center;
+   justify-content: center;
+   
+   @include desktop-big-size {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+   }
 }
 
 // Logo
+.navbar__logoContainer {
+   order: 0;
+}
+
 .navbar__logo {
-   font-size: 1.5rem;
+   font-size: 2rem;
    font-weight: 800;
    text-decoration: none;
    color: $black-color;
+   width: 50%;
+   
+   @include desktop-big-size {
+      font-size: 1.5rem;
+   }
 }
 
 .navbar__logo:hover {
@@ -28,37 +48,49 @@
 // List items
 .navbar__listItems {
    display: flex;
-   column-gap: 2rem;
+   column-gap: .8rem;
    list-style: none;
    padding: 0;
    margin: 0;
+   order: 2;
+   
+   @include desktop-big-size {
+      order: 1;
+      column-gap: 2rem;
+   }
 }
 
-.navbar__itemWrapper {
-   position: relative;
-}
+@include desktop-big-size {
+   .navbar__itemWrapper {
+      position: relative;
+   }
 
-.navbar__itemWrapper::after {
-   content: "";
-   position: absolute;
-   height: 2px;
-   width: 100%;
-   background-color: $blue-color;
-   inset-inline-start: 0;
-   inset-block-start: 1.5rem;
-   transform: scaleX(0);
-   transition: all 0.3s ease;
-}
-
-.navbar__itemWrapper:hover::after {
-   transform: scaleX(1);
+   .navbar__itemWrapper::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: $blue-color;
+      inset-inline-start: 0;
+      inset-block-start: 1.5rem;
+      transform: scaleX(0);
+      transition: all 0.3s ease;
+   }
+   
+   .navbar__itemWrapper:hover::after {
+      transform: scaleX(1);
+   }
 }
 
 .navbar__itemLink {
-   font-size: .9rem;
+   font-size: .8rem;
    font-weight: 500;
    text-decoration: none;
    color: $dark-gray-color;
+   
+   @include desktop-big-size {
+      font-size: .9rem;
+   }
 }
 
 .navbar__itemWrapper:hover {
@@ -69,9 +101,16 @@
 
 // Action buttons
 .navbar__actionsContainer {
+   order: 1;
+   margin-block: 1rem 2rem;
    display: flex;
    align-items: center;
    column-gap: 1.2rem;
+
+   @include desktop-big-size {
+      order: 2;
+      margin-block: 0;
+   }
 }
 
 .navbar__actionButton {
@@ -91,8 +130,12 @@
 .navbar__actionButton--singup {
    color: $white-color;
    background-color: $blue-color;
-   padding: .8rem 2rem;
+   padding: .6rem 1.5rem;
    border-radius: 10px;
+   
+   @include desktop-big-size {
+      padding: .8rem 2rem;
+   }
 }
 
 .navbar__actionButton--singup:hover {

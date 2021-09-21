@@ -26,8 +26,13 @@
 .categories__items {
    width: 100%;
    display: flex;
-   justify-content: space-between;
+   flex-wrap: wrap;
    margin-block-start: 3.5rem;
+   
+   @include desktop-big-size() {
+      justify-content: space-between;
+   }
+   
 }
 
 .categories__item {
