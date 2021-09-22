@@ -16,15 +16,31 @@ body {
 .mainContainer {
   max-width: 1200px;
   margin: 0 auto;
+  padding-inline: 0.5rem;
+}
+@media only screen and (min-width: 1300px) {
+  .mainContainer {
+    padding-inline: 0;
+  }
 }
 
 /* ===== header section ===== */
 .header {
-  padding: 0.5rem;
+  padding-block-start: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-block-start: 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    padding-block-start: 1.5rem;
+  }
 }
 @media only screen and (min-width: 1300px) {
   .header {
-    padding-block-start: 2rem;
+    padding: 2rem 0 0 0;
   }
 }
 
@@ -33,8 +49,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 768px) {
   .navbar {
     flex-direction: row;
     justify-content: space-between;
@@ -44,6 +61,14 @@ body {
 
 .navbar__logoContainer {
   order: 0;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .navbar__logoContainer {
+    width: auto;
+    text-align: start;
+  }
 }
 
 .navbar__logo {
@@ -69,20 +94,35 @@ body {
 
 .navbar__listItems {
   display: flex;
-  column-gap: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
   order: 2;
+  width: 100%;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 425px) {
   .navbar__listItems {
-    order: 1;
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar__listItems {
     column-gap: 2rem;
+    margin-block-start: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .navbar__listItems {
+    margin-block-start: 0;
+    width: auto;
+    order: 1;
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1024px) {
   .navbar__itemWrapper {
     position: relative;
   }
@@ -126,9 +166,18 @@ body {
   align-items: center;
   column-gap: 1.2rem;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 768px) {
+  .navbar__actionsContainer {
+    margin-block: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
   .navbar__actionsContainer {
     order: 2;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .navbar__actionsContainer {
     margin-block: 0;
   }
 }
@@ -167,28 +216,41 @@ body {
 .main {
   background: linear-gradient(#D6AEE1 55%, #A5A0DA);
   width: 100%;
-  height: 600px;
+  height: 320px;
   margin-block: 4rem 7rem;
-  border-radius: 30px;
+  border-radius: 15px;
   position: relative;
   display: flex;
   justify-content: center;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 425px) {
+  .main {
+    height: 350px;
+    border-radius: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
   .main {
     margin-block: 6rem 7rem;
+    height: 510px;
+    border-radius: 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main {
+    height: 600px;
+    border-radius: 30px;
   }
 }
 
 .main__carousel {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .main__carouselInner,
-.main__carouselItem,
-.main__carouselImage {
-  height: 100%;
+.main__carouselItem {
+  height: inherit;
 }
 
 .main__carouselItem {
@@ -198,40 +260,89 @@ body {
 .main__carouselImage {
   position: absolute;
   inset-block-end: 0;
+  max-height: 130px;
   object-fit: contain;
-  max-height: 350px;
+}
+@media only screen and (min-width: 425px) {
+  .main__carouselImage {
+    max-height: 160px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main__carouselImage {
+    max-height: 260px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main__carouselImage {
+    max-height: 350px;
+  }
 }
 
 .main__carouselCaption {
   position: absolute;
-  inset-block-start: 12rem;
+  inset-block-start: 9.1rem;
   padding: 0;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 300;
   color: #3A3446;
+}
+@media only screen and (min-width: 425px) {
+  .main__carouselCaption {
+    inset-block-start: 8.9rem;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main__carouselCaption {
+    inset-block-start: 12rem;
+    font-size: 1.5rem;
+  }
 }
 
 .main__carouselButtons {
   position: absolute;
-  inset-block-start: 12rem;
+  inset-block-start: 9rem;
   display: flex;
   align-items: center;
-  column-gap: 14rem;
+  column-gap: 9rem;
+}
+@media only screen and (min-width: 425px) {
+  .main__carouselButtons {
+    column-gap: 10rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main__carouselButtons {
+    inset-block-start: 12rem;
+    column-gap: 14rem;
+  }
 }
 
 .main__carouselButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   border: 1px solid #3f4579;
   border-radius: 50%;
 }
+@media only screen and (min-width: 768px) {
+  .main__carouselButton {
+    height: 40px;
+    width: 40px;
+  }
+}
 
 .main__carouselArrow {
-  width: 15px;
+  width: 10px;
   color: #3f4579;
+}
+@media only screen and (min-width: 768px) {
+  .main__carouselArrow {
+    width: 15px;
+  }
 }
 
 .main__carouselButton:hover {
@@ -243,10 +354,15 @@ body {
 
 .main__headings {
   position: absolute;
-  inset-block-start: 3.2rem;
+  inset-block-start: 2rem;
   display: flex;
   flex-direction: column;
   row-gap: 0.8rem;
+}
+@media only screen and (min-width: 768px) {
+  .main__headings {
+    inset-block-start: 3.2rem;
+  }
 }
 
 .main__heading,
@@ -262,9 +378,14 @@ body {
 }
 
 .main__subheading {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #3A3446;
+}
+@media only screen and (min-width: 768px) {
+  .main__subheading {
+    font-size: 3.5rem;
+  }
 }
 
 .main__search {
@@ -277,6 +398,7 @@ body {
   border-radius: 30px;
   box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.3);
   padding: 2rem 2.5rem;
+  display: none;
 }
 
 .main__searchForm {

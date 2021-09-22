@@ -1,9 +1,17 @@
 /* ===== header section ===== */
 .header {
-   padding: .5rem;
+   padding-block-start: .5rem;
 
+   @include tablet-size {
+      padding-block-start: 1rem;
+   }
+   
+   @include desktop-small-size {
+      padding-block-start: 1.5rem;
+   }
+   
    @include desktop-big-size {
-      padding-block-start: 2rem;
+      padding: 2rem 0 0 0;
    }
 }
 
@@ -12,8 +20,9 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   padding: 0;
    
-   @include desktop-big-size {
+   @include tablet-size {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -23,6 +32,13 @@
 // Logo
 .navbar__logoContainer {
    order: 0;
+   width: 100%;
+   text-align: center;
+
+   @include tablet-size {
+      width: auto;
+      text-align: start;
+   }
 }
 
 .navbar__logo {
@@ -48,19 +64,32 @@
 // List items
 .navbar__listItems {
    display: flex;
-   column-gap: .8rem;
+   justify-content: space-between;
+   align-items: center;
    list-style: none;
    padding: 0;
    margin: 0;
    order: 2;
+   width: 100%;
    
-   @include desktop-big-size {
-      order: 1;
+   @include cellphone-size {
+      justify-content: center;
+      column-gap: 1.5rem;
+   }
+
+   @include tablet-size {
       column-gap: 2rem;
+      margin-block-start: 1.2rem;
+   }
+   
+   @include desktop-small-size {
+      margin-block-start: 0;
+      width: auto;
+      order: 1;
    }
 }
 
-@include desktop-big-size {
+@include desktop-small-size {
    .navbar__itemWrapper {
       position: relative;
    }
@@ -106,9 +135,16 @@
    display: flex;
    align-items: center;
    column-gap: 1.2rem;
+   
+   @include tablet-size {
+      margin-block: 0;
+   }
 
-   @include desktop-big-size {
+   @include desktop-small-size {
       order: 2;
+   }
+   
+   @include desktop-big-size {
       margin-block: 0;
    }
 }

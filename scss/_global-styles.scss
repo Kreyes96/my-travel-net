@@ -16,4 +16,9 @@ body {
 .mainContainer {
    max-width: 1200px;
    margin: 0 auto;
+   padding-inline: .5rem;
+
+   @include desktop-big-size {
+      padding-inline: 0;
+   }
 }
