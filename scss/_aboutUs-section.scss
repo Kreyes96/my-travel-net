@@ -3,7 +3,12 @@
    width: 100%;
    height: 500px;
    display: flex;
+   flex-direction: column;
    margin-block-end: 14rem;
+
+   @include tablet-size {
+      flex-direction: row;
+   }
 }
 
 .aboutUs__imageContainer,

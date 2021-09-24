@@ -15,6 +15,12 @@
    }
 }
 
+@mixin cellphone-big-size() {
+   @media only screen and (min-width: #{$cellphone-big-size}) {
+      @content;
+   }
+}
+
 @mixin tablet-size() {
    @media only screen and (min-width: #{$tablet-size}) {
       @content;
