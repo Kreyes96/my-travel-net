@@ -5,7 +5,15 @@
    align-items: center;
    row-gap: 1rem;
    width: 100%;
-   margin-block-end: 7.5rem;
+   margin-block-end: 6rem;
+   
+   @include tablet-size {
+      margin-block-end: 7rem;
+   }
+   
+   @include desktop-small-size {
+      margin-block-end: 7.5rem;
+   }
 }
 
 // heading
@@ -56,7 +64,19 @@
 
 // places
 .popularSearch__placesContainer {
-   width: 85%;
+   width: 100%;
+
+   @include tablet-size {
+      width: 95%;
+   }
+   
+   @include desktop-small-size {
+      width: 90%;
+   }
+   
+   @include desktop-big-size {
+      width: 85%;
+   }
 }
 
 .popularSearch__placesList {
@@ -66,31 +86,61 @@
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   gap: 1.2rem 1.5rem;
+   gap: .8rem;
+   
+   @include desktop-small-size {
+      gap: 1.2rem 1.5rem;
+   }
 }
 
 .popularSearch__placeItem {
-   border-radius: 14px;
-}
+   border-radius: 10px;
 
-.popularSearch__placeItem:hover {
-   background: linear-gradient(to left, #de91f3, #A5A0DA);
-   transform: scale(1.1);
-   transition: all .5s ease;
+   @include tablet-size {
+      border-radius: 12px;
+   }
    
-   .popularSearch__placeLink {
-      color: $white-color;
-      border: 1px solid transparent;
+   @include desktop-small-size {
+      border-radius: 14px;
    }
 }
 
 .popularSearch__placeLink {
-   font-size: 1rem;
+   font-size: .8rem;
    font-weight: 500;
    text-decoration: none;
    color: $black-color;
    border: 1px solid $dark-gray-color;
-   border-radius: 14px;
-   padding: .7rem 2rem;
+   border-radius: 10px;
+   padding: .5rem 1.5rem;
    display: inline-block;
+
+   &:hover {
+      color: $black-color;
+   }
+   
+   @include tablet-size {
+      font-size: .9rem;
+      padding: .6rem 1.8rem;
+      border-radius: 12px;
+   }
+   
+   @include desktop-small-size {
+      font-size: 1rem;
+      padding: .7rem 2rem;   
+      border-radius: 14px;
+   }
+}
+
+@include desktop-small-size {
+   .popularSearch__placeItem:hover {
+      background: linear-gradient(to left, #de91f3, #A5A0DA);
+      transform: scale(1.1);
+      transition: all .5s ease;
+      
+      .popularSearch__placeLink {
+         color: $white-color;
+         border: 1px solid transparent;
+      }
+   }
 }

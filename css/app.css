@@ -632,7 +632,17 @@ body {
   align-items: center;
   row-gap: 1rem;
   width: 100%;
-  margin-block-end: 7.5rem;
+  margin-block-end: 6rem;
+}
+@media only screen and (min-width: 768px) {
+  .popularSearch {
+    margin-block-end: 7rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .popularSearch {
+    margin-block-end: 7.5rem;
+  }
 }
 
 .popularSearch__headingContainer {
@@ -681,7 +691,22 @@ body {
 }
 
 .popularSearch__placesContainer {
-  width: 85%;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .popularSearch__placesContainer {
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .popularSearch__placesContainer {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .popularSearch__placesContainer {
+    width: 85%;
+  }
 }
 
 .popularSearch__placesList {
@@ -691,34 +716,67 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.2rem 1.5rem;
+  gap: 0.8rem;
+}
+@media only screen and (min-width: 1024px) {
+  .popularSearch__placesList {
+    gap: 1.2rem 1.5rem;
+  }
 }
 
 .popularSearch__placeItem {
-  border-radius: 14px;
+  border-radius: 10px;
 }
-
-.popularSearch__placeItem:hover {
-  background: linear-gradient(to left, #de91f3, #A5A0DA);
-  transform: scale(1.1);
-  transition: all 0.5s ease;
+@media only screen and (min-width: 768px) {
+  .popularSearch__placeItem {
+    border-radius: 12px;
+  }
 }
-.popularSearch__placeItem:hover .popularSearch__placeLink {
-  color: #ffffff;
-  border: 1px solid transparent;
+@media only screen and (min-width: 1024px) {
+  .popularSearch__placeItem {
+    border-radius: 14px;
+  }
 }
 
 .popularSearch__placeLink {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   text-decoration: none;
   color: #3A3446;
   border: 1px solid #A196AB;
-  border-radius: 14px;
-  padding: 0.7rem 2rem;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
   display: inline-block;
 }
+.popularSearch__placeLink:hover {
+  color: #3A3446;
+}
+@media only screen and (min-width: 768px) {
+  .popularSearch__placeLink {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.8rem;
+    border-radius: 12px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .popularSearch__placeLink {
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+    border-radius: 14px;
+  }
+}
 
+@media only screen and (min-width: 1024px) {
+  .popularSearch__placeItem:hover {
+    background: linear-gradient(to left, #de91f3, #A5A0DA);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+  }
+  .popularSearch__placeItem:hover .popularSearch__placeLink {
+    color: #ffffff;
+    border: 1px solid transparent;
+  }
+}
 /* ===== categories section ===== */
 .categories {
   width: 100%;
