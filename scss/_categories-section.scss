@@ -2,11 +2,15 @@
 .categories {
    width: 100%;
    background-color: $gray-color;
-   margin-block-end: 39rem;
+   margin-block-end: 6rem;
    padding: 3rem 0;
    
    @include tablet-size {
       padding: 3.5rem 0;
+      margin-block-end: 9rem;
+   }
+   
+   @include desktop-small-size {
       margin-block-end: 10rem;
    }
 }
