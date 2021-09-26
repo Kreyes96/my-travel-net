@@ -987,7 +987,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
-  margin-block-end: 7rem;
+  margin-block-end: 8rem;
 }
 @media only screen and (min-width: 768px) {
   .aboutUs {
@@ -1492,31 +1492,86 @@ body {
 }
 
 .places__heading {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #3A3446;
 }
+@media only screen and (min-width: 425px) {
+  .places__heading {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .places__heading {
+    font-size: 2.4rem;
+  }
+}
 
 .places__description {
-  margin-block: 1.3rem 5rem;
+  margin-block: 1rem 3rem;
   font-weight: 500;
   text-align: center;
   color: #A196AB;
+}
+@media only screen and (min-width: 768px) {
+  .places__description {
+    margin-block: 1.3rem 5rem;
+  }
+}
+
+.places__description-linebreak {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .places__description-linebreak {
+    display: block;
+  }
 }
 
 .places__cardsContainer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  row-gap: 3.8rem;
+  row-gap: 2rem;
   margin-block-end: 4rem;
+}
+@media only screen and (min-width: 576px) {
+  .places__cardsContainer {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .places__cardsContainer {
+    justify-content: space-between;
+    row-gap: 3.8rem;
+  }
 }
 
 .places__card {
-  width: 265px;
+  width: 90%;
   border-radius: 10px;
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 425px) {
+  .places__card {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .places__card {
+    width: calc(50% - 2rem);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .places__card {
+    width: 32%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .places__card {
+    width: 265px;
+  }
 }
 
 .places__cardContent {
@@ -1624,11 +1679,12 @@ body {
   color: #ffffff;
 }
 
-.places__card:hover {
-  transform: translateY(-1rem);
-  transition: all 0.5s ease;
+@media only screen and (min-width: 1024px) {
+  .places__card:hover {
+    transform: translateY(-1rem);
+    transition: all 0.5s ease;
+  }
 }
-
 .places__viewDestinations {
   text-decoration: none;
   color: #ffffff;

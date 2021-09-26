@@ -9,33 +9,78 @@
 
 // heading
 .places__heading {
-   font-size: 2.4rem;
+   font-size: 1.5rem;
    font-weight: 600;
    color: $black-color;
+   
+   @include cellphone-size {
+      font-size: 1.8rem;
+   }
+   
+   @include tablet-size {
+      font-size: 2.4rem;
+   }
 }
 
 // description
 .places__description {
-   margin-block: 1.3rem 5rem;
+   margin-block: 1rem 3rem;
    font-weight: 500;
    text-align: center;
    color: $dark-gray-color;
+   
+   @include tablet-size {
+      margin-block: 1.3rem 5rem;
+   }
+}
+
+.places__description-linebreak {
+   display: none;
+
+   @include tablet-size {
+      display: block;
+   }
 }
 
 // cards
 .places__cardsContainer {
    width: 100%;
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    flex-wrap: wrap;
-   row-gap: 3.8rem;
+   row-gap: 2rem;
    margin-block-end: 4rem;
+
+   @include cellphone-big-size {
+      justify-content: space-evenly;
+   }
+   
+   @include tablet-size {
+      justify-content: space-between;
+      row-gap: 3.8rem;
+   }
 }
 
 .places__card {
-   width: 265px;
+   width: 90%;
    border-radius: 10px;
    box-shadow: 0px 0px 8px 1px rgba($color: #000000, $alpha: 0.1);
+   
+   @include cellphone-size {
+      width: 80%;
+   }
+   
+   @include cellphone-big-size {
+      width: calc(50% - 2rem);
+   }
+
+   @include tablet-size {
+      width: 32%;
+   }
+
+   @include desktop-small-size {
+      width: 265px;
+   }
 }
 
 .places__cardContent {
@@ -148,9 +193,11 @@
    color: $white-color;
 }
 
-.places__card:hover {
-   transform: translateY(-1rem);
-   transition: all .5s ease;
+@include desktop-small-size {
+   .places__card:hover {
+      transform: translateY(-1rem);
+      transition: all .5s ease;
+   }
 }
 
 // view destinations
