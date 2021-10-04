@@ -3,13 +3,36 @@
    width: 100%;
    display: flex;
    flex-direction: column;
+   row-gap: 2rem;
    padding-block-end: 2rem;
+   
+   @include desktop-small-size {
+      row-gap: 1rem;
+   }
+   
+   @include desktop-big-size {
+      row-gap: 0;
+   }
 }
 
 // footer-sections
 .footer__sections {
    display: grid;
-   grid-template-columns: repeat(5, 20%);
+   grid-template-columns: repeat(2, 50%);
+   row-gap: 3rem;
+   
+   @include tablet-size {
+      grid-template-columns: repeat(3, calc(100% / 3));
+   }
+   
+   @include desktop-small-size {
+      grid-template-columns: repeat(4, 25%);
+   }
+   
+   @include desktop-big-size {
+      grid-template-columns: repeat(5, 20%);
+      row-gap: 0;
+   }
 }
 
 // footer-section
@@ -18,9 +41,35 @@
    flex-direction: column;
    align-items: flex-start;
    row-gap: 1.4rem;
+   padding-inline: 1.2rem;
+
+   @include cellphone-size {
+      padding-inline: 2rem;
+   }
+   
+   @include cellphone-big-size {
+      padding-inline: 3rem;
+   }
+   
+   @include desktop-small-size {
+      padding-inline-end: 0;
+   }
+
+   @include desktop-big-size {
+      padding-inline: 0;
+   }
 }
 
 // section-one
+.footer__section--socialMedia {
+   order: 1;
+   padding-inline-end: 0;
+   
+   @include desktop-big-size {
+      order: 0;
+   }
+}
+
 .footer__linkHome {
    font-size: 1.2rem;
    font-weight: 800;
@@ -50,8 +99,8 @@
 }
 
 .footer__socialMedia-link {
-   width: 30px;
-   height: 30px;
+   width: 34px;
+   height: 34px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -59,38 +108,45 @@
    text-decoration: none;
    border: 1px solid $dark-gray-color;
    border-radius: 50%;
-}
-
-.facebook-link:hover {
-   border: 1px solid #3b5998;
-   background-color: #3b5998;
-   transition: all .3s ease;
    
-   .facebook-icon {
-      color: $white-color;
-      transition: all .2s ease;
+   @include desktop-small-size {
+      width: 30px;
+      height: 30px;
    }
 }
 
-.twitter-link:hover {
-   border: 1px solid #00acee;
-   background-color: #00acee;
-   transition: all .3s ease;
-   
-   .twitter-icon {
-      color: $white-color;
-      transition: all .2s ease;
+@include desktop-small-size {
+   .facebook-link:hover {
+      border: 1px solid #3b5998;
+      background-color: #3b5998;
+      transition: all .3s ease;
+      
+      .facebook-icon {
+         color: $white-color;
+         transition: all .2s ease;
+      }
    }
-}
-
-.instagram-link:hover {
-   border: 1px solid #F56040;
-   background-color: #F56040;
-   transition: all .3s ease;
-
-   .instagram-icon {
-      color: $white-color;
-      transition: all .2s ease;
+   
+   .twitter-link:hover {
+      border: 1px solid #00acee;
+      background-color: #00acee;
+      transition: all .3s ease;
+      
+      .twitter-icon {
+         color: $white-color;
+         transition: all .2s ease;
+      }
+   }
+   
+   .instagram-link:hover {
+      border: 1px solid #F56040;
+      background-color: #F56040;
+      transition: all .3s ease;
+   
+      .instagram-icon {
+         color: $white-color;
+         transition: all .2s ease;
+      }
    }
 }
 
@@ -110,25 +166,27 @@
 }
 
 // section two...five
-.footer__sectionHeading-wrapper {
-   position: relative;
-}
-
-.footer__sectionHeading-wrapper::after {
-   content: "";
-   position: absolute;
-   height: 3px;
-   width: 100%;
-   inset-block-start: 1.4rem;
-   inset-inline-start: 0;
-   transform: scaleX(0);
-   transition: all .3s ease;
-   background-color: $blue-color;
-}
-
-.footer__section:hover {
+@include desktop-small-size {
+   .footer__sectionHeading-wrapper {
+      position: relative;
+   }
+   
    .footer__sectionHeading-wrapper::after {
-      transform: scaleX(1);
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      inset-block-start: 1.4rem;
+      inset-inline-start: 0;
+      transform: scaleX(0);
+      transition: all .3s ease;
+      background-color: $blue-color;
+   }
+   
+   .footer__section:hover {
+      .footer__sectionHeading-wrapper::after {
+         transform: scaleX(1);
+      }
    }
 }
 
@@ -136,7 +194,7 @@
    font-size: 1rem;
    font-weight: 700;
    color: $blue-color;
-   margin: 0;  
+   margin: 0;
 }
 
 .footer__sectionList {
@@ -168,6 +226,14 @@
 
 .footer__copyrightText {
    margin: 0;
-   font-size: .9rem;
+   font-size: .7rem;
    color: $dark-gray-color;
+   
+   @include cellphone-size {
+      font-size: .8rem;
+   }
+
+   @include cellphone-big-size {
+      font-size: .9rem;
+   }
 }
