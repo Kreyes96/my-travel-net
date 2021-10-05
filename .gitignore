@@ -1,6 +1,4 @@
-bootstrap
 node_modules
-images/psd
+images/psd/carousel
 
-css/normalize.css
 package-lock.json
