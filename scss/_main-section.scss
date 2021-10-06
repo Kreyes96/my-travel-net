@@ -380,3 +380,50 @@
       display: block;
    }
 }
+
+// circles-decoration
+.main__circleDecoration {
+   border-radius: 50%;
+   position: absolute;
+   z-index: -1;
+   
+   @include tablet-size {
+      display: none;
+   }
+}
+
+.main__circleDecoration--one {
+   width: 16px;
+   height: 16px;
+   background-color: $purple-light-color;
+   inset-block-end: -16rem;
+   inset-inline-start: -.3rem;
+   
+   @include cellphone-size {
+      inset-inline-start: -.2rem;
+   }
+
+   @include cellphone-big-size {
+      width: 18px;
+      height: 18px;
+      inset-inline-start: 0;
+   }
+}
+
+.main__circleDecoration--two {
+   width: 12px;
+   height: 12px;
+   background-color: $pink-color;
+   inset-block-end: -6rem;
+   inset-inline-end: -.1rem;
+   
+   @include cellphone-size {
+      inset-inline-end: 0;
+   }
+
+   @include cellphone-big-size {
+      width: 15px;
+      height: 15px;
+      inset-inline-end: .1rem;
+   }
+}

@@ -625,6 +625,57 @@ body {
   }
 }
 
+.main__circleDecoration {
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .main__circleDecoration {
+    display: none;
+  }
+}
+
+.main__circleDecoration--one {
+  width: 16px;
+  height: 16px;
+  background-color: #A5A0DA;
+  inset-block-end: -16rem;
+  inset-inline-start: -0.3rem;
+}
+@media only screen and (min-width: 425px) {
+  .main__circleDecoration--one {
+    inset-inline-start: -0.2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .main__circleDecoration--one {
+    width: 18px;
+    height: 18px;
+    inset-inline-start: 0;
+  }
+}
+
+.main__circleDecoration--two {
+  width: 12px;
+  height: 12px;
+  background-color: #D6AEE1;
+  inset-block-end: -6rem;
+  inset-inline-end: -0.1rem;
+}
+@media only screen and (min-width: 425px) {
+  .main__circleDecoration--two {
+    inset-inline-end: 0;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .main__circleDecoration--two {
+    width: 15px;
+    height: 15px;
+    inset-inline-end: 0.1rem;
+  }
+}
+
 /* ====== popular search section ===== */
 .popularSearch {
   display: flex;
