@@ -8,6 +8,11 @@
    box-sizing: $box-model;
 }
 
+// Button
+@mixin button($background-color) {
+   background-color: $background-color;
+}
+
 // Media queries 
 @mixin cellphone-size() {
    @media only screen and (min-width: #{$cellphone-size}) {
