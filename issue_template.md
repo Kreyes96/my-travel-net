@@ -1,18 +1,18 @@
-# Descripción del problema.
-Por favor describa el problema de la manera más clara y concisa posible.
+# Description of the problem.
+Please describe the problem as clearly and concisely as possible.
 
-# Replicando el problema.
-Por favor describa paso a paso en qué situación se da el problema.
+# Replicating the problem.
+Please describe step by step in which situation the problem occurs.
 
-# Dispositivo utilizado mientras observó el problema.
-- [ ] Celular
+# Device used while observing the problem.
+- [ ] Cellphone
 - [ ] Tablet
-- [ ] Computadora
-- [ ] Televisión
- 
-# Sistema operativo.
-¿Qué sistema operativo y versión estaba utilizando cuando se presentó el problema?
+- [ ] PC
+- [ ] TV
 
-# Navegador web.
-¿Qué navegador web utilizó cuando observó el problema? De ser posible, escriba la versión
-del navegador web.
+# OS.
+What operating system and version were you using when the problem occurred?
+
+# Web navigator.
+What web browser did you use when you observed the problem? If possible, write the version
+from the web browser.
