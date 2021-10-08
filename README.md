@@ -5,7 +5,7 @@ This is a travels website homepage.
 If you want to see a demo, you can give [clik here](https://kreyes96.github.io/my-travel-net/).
 
 ## **Download.** 💾
-If you want to get the project files, feel free to clone the repository from your terminal or download the .zip of it.
+If you want to get the project files, feel free to clone the repository from your terminal or download the .zip of it. I have created this project for demonstration purposes only.
 
 ## **Preview.** 🧐
 The project looks like this:
