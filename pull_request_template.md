@@ -1,10 +1,10 @@
-# ¿Qué tipo de cambios ha realizado?
+# What kinds of changes have you made?
 - [ ] Front-End
 - [ ] Back-End
-- [ ] Configuraciones
+- [ ] Settings
 
-# Descripción del pull request.
-Describa de manera clara y concisa los nuevos cambios que ha realizado.
+# Description of the pull request.
+Clearly and concisely describe the new changes you have made.
 
-# ¿Cómo se puede comprobar los nuevos cambios?
-URL y/o forma en que se pueden observar los nuevos cambios realizados.
+# How can you check the new changes?
+URL and/or way in which the new changes made can be observed.
